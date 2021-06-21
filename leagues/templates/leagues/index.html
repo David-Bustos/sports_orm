@@ -28,5 +28,103 @@
 				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 			{% endfor %}
 		</ol>
+		<hr>
+		<h1>ORM Exercises</h1>
+		<h3>Baseball Leagues</h3>
+		<ol>
+			{% for league in baseball_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Women Leagues</h3>
+		<ol>
+			{% for league in women_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Hockey Leagues</h3>
+		<ol>
+			{% for league in hockey_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>No Football Leagues</h3>
+		<ol>
+			{% for league in no_football_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Conference Leagues</h3>
+		<ol>
+			{% for league in conference_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Atlantic Leagues</h3>
+		<ol>
+			{% for league in atlantic_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Dallas Teams</h3>
+		<ol>
+			{% for team in dallas_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Raptors Teams</h3>
+		<ol>
+			{% for team in raptors_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>City Teams</h3>
+		<ol>
+			{% for team in city_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>T Teams</h3>
+		<ol>
+			{% for team in t_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Teams (Order by location)</h3>
+		<ol>
+			{% for team in order_location_teams %}
+				<li>{{team.team_name}} - ({{team.location}})</li>
+			{% endfor %}
+		</ol>
+		<h3>Teams (Order by name inverse)</h3>
+		<ol>
+			{% for team in order_name_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Cooper Players</h3>
+		<ol>
+			{% for player in cooper_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Joshua Players</h3>
+		<ol>
+			{% for player in joshua_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Cooper Players (No S name)</h3>
+		<ol>
+			{% for player in cooper_s_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Alexander or  Wyatt Players</h3>
+		<ol>
+			{% for player in alexander_wyatt_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
 	</body>
 </html>
