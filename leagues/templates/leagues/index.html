@@ -28,8 +28,9 @@
 				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 			{% endfor %}
 		</ol>
+<!-- SPORTS ORM I -->
 		<hr>
-		<h1>ORM Exercises</h1>
+		<h1>ORM Exercises I</h1>
 		<h3>Baseball Leagues</h3>
 		<ol>
 			{% for league in baseball_leagues %}
@@ -124,6 +125,99 @@
 		<ol>
 			{% for player in alexander_wyatt_players %}
 				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<hr>
+<!-- SPORTS ORM II -->
+		<h1>ORM Exercises II</h1>
+		<h3>Atlantic Football Conference (Teams)</h3>
+		<ol>
+			{% for team in afc_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Boston Hawks (Players)</h3>
+		<ol>
+			{% for player in boston_hawks_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>International Women Baseball Conference (Players)</h3>
+		<ol>
+			{% for player in iwbc_players%}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>World Conference Soccer (Diaz Players)</h3>
+		<ol>
+			{% for player in wcs_diaz_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Soccer (Players)</h3>
+		<ol>
+			{% for player in soccer_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Sophia Players (Teams)</h3>
+		<ol>
+			{% for team in sophia_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Sophia Players (Leagues)</h3>
+		<ol>
+			{% for league in sophia_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Flores not Players Los Angeles Hawks(Players)</h3>
+		<ol>
+			{% for player in flores_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Samuel Gonzales (All Teams)</h3>
+		<ol>
+			{% for team in samuel_all_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Stampeders Manitoba (All Players)</h3>
+		<ol>
+			{% for player in st_all_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Washington Vikings (Old Players)</h3>
+		<ol>
+			{% for player in wv_old_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Jacob Scott (Old Teams)</h3>
+		<ol>
+			{% for team in jacob_old_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Lucas Players in Atlantic Football Conference (All Players)</h3>
+		<ol>
+			{% for player in all_lucas_afc %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>Teams with 12 players o more (Big Teams)</h3>
+		<ol>
+			{% for team in gt_12p_teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h3>All Players Order by number of Teams (All Players)</h3>
+		<ol>
+			{% for player in all_players_nteams %}
+				<li>{{player.first_name}} {{player.last_name}} ({{player.n_teams}})</li>
 			{% endfor %}
 		</ol>
 	</body>
